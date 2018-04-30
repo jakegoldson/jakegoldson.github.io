@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>👨🏼‍💻</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css?family=Crimson+Text" rel="stylesheet">
+  <style>
+    html,
+    body {
+      margin: 0;
+      height: 100%;
+      background-color: #001111;
+      color: white;
+      text-align: center;
+      font-size: 1rem;
+      font-family: 'Crimson Text', serif;
+    }
+
+    #bg {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      background-image: url(bg.jpg);
+      background-size: calc(cover + 20px);
+      background-position: calc(-20px + 18px * var(--mouse-x)) calc(-20px + 18px * var(--mouse-y));
+      filter: blur(2px);
+      z-index: 0;
+    }
+
+    #container {
+      position: relative;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 1;
+    }
+
+    #links {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      padding: 1rem;
+      z-index: 1;
+    }
+
+    #links .separator:before {
+      content: '•';
+      display: inline;
+      margin: 0 0.6rem;
+    }
+
+    h1 {
+      font-size: 4rem;
+      margin: 0;
+    }
+
+    a,
+    a:visited {
+      color: rgba(255, 255, 255, 0.7);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="bg"></div>
+  <div id="container">
+    <div>
+      <h1>Jake Goldson</h1>
+    </div>
+  </div>
+  <div id="links">
+    <a href="https://linkedin.com/in/jakegoldson">LinkedIn</a>
+    <span class="separator"></span>
+    <a href="https://github.com/smea0l">Github</a>
+  </div>
+  <script src="bundle.js"></script>
+</body>
+
+</html>
