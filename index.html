@@ -12,7 +12,6 @@
     body {
       margin: 0;
       height: 100%;
-      background-color: #001111;
       color: white;
       text-align: center;
       font-size: 1rem;
@@ -20,16 +19,16 @@
     }
 
     #bg {
-      position: absolute;
-      left: 0;
-      right: 0;
-      top: 0;
-      bottom: 0;
+      position: fixed;
+      left: calc(-20px + 18px * var(--mouse-x));
+      top:  calc(-20px + 18px * var(--mouse-y));
+      height: calc(100vh + 40px);
+      width: calc(100vw + 40px);
+      background-color: #001111;
       background-image: url(bg.jpg);
-      background-size: calc(cover + 20px);
-      background-position: calc(-20px + 18px * var(--mouse-x)) calc(-20px + 18px * var(--mouse-y));
+      background-size: cover;
       filter: blur(2px);
-      z-index: 0;
+      z-index: -1;
     }
 
     #container {
@@ -38,7 +37,6 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      z-index: 1;
     }
 
     #links {
@@ -46,7 +44,6 @@
       left: 0;
       bottom: 0;
       padding: 1rem;
-      z-index: 1;
     }
 
     #links .separator:before {
