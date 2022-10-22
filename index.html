@@ -9,66 +9,6 @@
       href="https://fonts.googleapis.com/css?family=Crimson+Text"
       rel="stylesheet"
     />
-    <style>
-      html,
-      body {
-        margin: 0;
-        height: 100%;
-        color: white;
-        text-align: center;
-        font-size: 1rem;
-        font-family: 'Crimson Text', serif;
-      }
-
-      #bg {
-        position: fixed;
-        left: calc(-20px + 18px * var(--mouse-x));
-        top: calc(-20px + 18px * var(--mouse-y));
-        height: calc(100vh + 40px);
-        width: calc(100vw + 40px);
-        background-color: #001111;
-        background-image: url(bg.jpg);
-        background-size: cover;
-        filter: blur(3px);
-        z-index: -1;
-      }
-
-      #container {
-        position: relative;
-        height: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-
-      #links {
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        padding: 1rem;
-      }
-
-      #links .separator:before {
-        content: '•';
-        display: inline;
-        margin: 0 0.6rem;
-      }
-
-      h1 {
-        font-size: 4rem;
-        margin: 0;
-      }
-
-      a,
-      a:visited {
-        color: rgba(255, 255, 255, 0.7);
-        text-decoration: none;
-      }
-
-      a:hover {
-        text-decoration: underline;
-      }
-    </style>
   </head>
 
   <body>
@@ -83,6 +23,6 @@
       <span class="separator"></span>
       <a href="https://github.com/jakegoldson">Github</a>
     </div>
-    <script src="bundle.js"></script>
+    <script type="module" src="/src/main.ts"></script>
   </body>
 </html>
